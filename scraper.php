@@ -35,13 +35,17 @@ for($id = 0; $id <= 0; $id++)
 	{
 	 $url = ("http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=".$id);
 	$link2 = file_get_html($url);
-  foreach($link2->find("//*[@id='w0']/table/tbody")as $element){
-    
-	   	 	 $num   = $element->find("//*[@id='w0']/table/tbody/tr[1]/td[1]" ,1);
-	  	   	 
-	  	   	
+  foreach($link2->find("//*[@id='w0']/table/tbody/tr")as $element){
 
-	  	   	 	echo "Case NO : $num";
+		if($element)
+	{
+
+	echo 	$num   = $element->find("td", 0);
+	echo	$courtname  = $element->find("td", 1);
+	echo	$caseno  = $element->find("td", 2);
+	echo	$status  = $element->find("td", 3);
+	$href = $element->find(".//td/button", 0);
+		}
 
 	  	
   }
