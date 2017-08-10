@@ -49,12 +49,12 @@ for($id = 0; $id <= 0; $id++)
 			if(is_object($href))
 	{
 		 $info['urlbutton'] = $href->value;
-		 echo $urlbutton;
+		 
 	}
 		}
 	  
 	  
-scraperwiki::save_sqlite(array('num'), array('num' => $info['num']));
+scraperwiki::save_sqlite(array('num'), array('num' => $info['num'],'courtname' => $info['courtname'],'caseno' => $info['caseno'],'status' => $info['status'],'urlbutton' => $info['urlbutton'] ));
 
 	  	
   }
