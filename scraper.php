@@ -40,10 +40,10 @@ for($id = 0; $id <= 0; $id++)
 		if(is_object($element))
 	{
 
-	 	$info['num'] 		= $element->find("td", 0);
-		$info['courtname']  	= $element->find("td", 1);
-		$info['caseno']  	= $element->find("td", 2);
-		$info['status']  	= $element->find("td", 3);
+	 	$info['num'] 		= $element->find("td", 0)->plaintext;
+		$info['courtname']  	= $element->find("td", 1)->plaintext;
+		$info['caseno']  	= $element->find("td", 2)->plaintext;
+		$info['status']  	= $element->find("td", 3)->plaintext;
 		$href 			= $element->find(".//td/button", 0);
 			
 			if(is_object($href))
