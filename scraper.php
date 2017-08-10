@@ -38,10 +38,10 @@ for($id = 0; $id <= 0; $id++)
   foreach($link2->find("//*[@id='w0']/table/tbody")as $element){
     
 	   	 	 $num   = $element->find("td" ,0);
-	  	   	 $CourtN   = $element->find("td" ,0);
-	  		 $CaseN   = $element->find("td" ,1);
-	  		 $Status   = $element->find("td" ,2);
-			 $Option  = $element->find("td" ,3);
+	  	   	 $CourtN   = $element->find("td" ,1);
+	  		 $CaseN   = $element->find("td" ,2);
+	  		 $Status   = $element->find("td" ,3);
+			 $Option  = $element->find("td" ,4);
 	  	   	
 
 	  	   	 	echo "Case NO : $num, CourtName : $CourtN";
