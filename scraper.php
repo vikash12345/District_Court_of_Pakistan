@@ -23,5 +23,22 @@
 // You can use whatever libraries you want: https://morph.io/documentation/php
 // All that matters is that your final data is written to an SQLite database
 // called "data.sqlite" in the current working directory which has at least a table
+
+
+
+require 'scraperwiki.php';
+require 'scraperwiki/simple_html_dom.php';
+//
+
+/** looping over list of ids of doctors **/
+for($id = 0; $id <= 2; $id++)
+	{
+	 $url = ("http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=".$id);
+	$link2 = file_get_html($url);
+  foreach($link2->find("//*[@id="w0"]/table/tbody")as $element){
+    
+    echo $element;
+  }
+}
 // called "data".
 ?>
