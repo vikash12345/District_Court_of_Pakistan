@@ -31,15 +31,22 @@ require 'scraperwiki/simple_html_dom.php';
 //
 
 /** looping over list of ids of doctors **/
-for($id = 0; $id <= 1; $id++)
+for($id = 0; $id <= 0; $id++)
 	{
 	 $url = ("http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=".$id);
 	$link2 = file_get_html($url);
   foreach($link2->find("//*[@id='w0']/table/tbody")as $element){
     
-	   	echo 	$num   = $element->find("td" ,0);
-	  	for($td = 1; $td <= 20; $td++){
-	}
+	   	 	 $num   = $element->find("td" ,0);
+	  	   	 $CourtN   = $element->find("td" ,0);
+	  		 $CaseN   = $element->find("td" ,1);
+	  		 $Status   = $element->find("td" ,2);
+			 $Option  = $element->find("td" ,3);
+	  	   	
+
+	  	   	 	
+
+	  	
   }
 }
 // called "data".
