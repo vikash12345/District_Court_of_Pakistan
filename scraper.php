@@ -53,17 +53,8 @@ for($id = 0; $id <= 0; $id++)
 	}
 		}
 	  
-	   scraperwiki::save_sqlite(array('Case','caseno'), 
-    array('Case' => $id, 
-          'CaseSeries' => (trim($info['num'])), 
-          'courtname' => (trim($info['courtname'])),
-	   'caseno' => (trim($info['caseno'])),
-	    'status' => (trim($info['status'])),
-	  	'Profile_URL' => (trim($info['urlbutton']))
-
-         
-        
-    ));
+	  
+scraperwiki::save_sqlite(array('name'), array('Case' => '$id', 'CaseSeries' => '$info['num']'));
 
 	  	
   }
