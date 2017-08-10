@@ -37,7 +37,7 @@ for($id = 0; $id <= 0; $id++)
 	$link2 = file_get_html($url);
   foreach($link2->find("//*[@id='w0']/table/tbody/tr[2]")as $element){
     
-	   	 	 $num   = $element->find("td" ,2);
+	   	 	 $num   = $element->find("tr[1]/td" ,2);
 	  	   	 
 	  	   	
 
