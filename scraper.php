@@ -40,18 +40,30 @@ for($id = 0; $id <= 0; $id++)
 		if(is_object($element))
 	{
 
-	 	$num   = $element->find("td", 0);
-		$courtname  = $element->find("td", 1);
-		$caseno  = $element->find("td", 2);
-		$status  = $element->find("td", 3);
-	$href = $element->find(".//td/button", 0);
+	 	$info['num'] 		= $element->find("td", 0);
+		$info['courtname']  	= $element->find("td", 1);
+		$info['caseno']  	= $element->find("td", 2);
+		$info['status']  	= $element->find("td", 3);
+		$href 			= $element->find(".//td/button", 0);
 			
 			if(is_object($href))
 	{
-		 $urlbutton = $href->value;
+		 $info['urlbutton'] = $href->value;
 		 echo $urlbutton;
 	}
 		}
+	  
+	   scraperwiki::save_sqlite(array('Case','caseno'), 
+    array('Page_No' => $id, 
+          'CaseSeries' => (trim($info['num'])), 
+          'courtname' => (trim($info['courtname'])),
+	   'caseno' => (trim($info['caseno'])),
+	    'status' => (trim($info['status'])),
+	  	'Profile_URL' => (trim($info['urlbutton']))
+
+         
+        
+    ));
 
 	  	
   }
