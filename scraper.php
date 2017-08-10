@@ -31,7 +31,7 @@ require 'scraperwiki/simple_html_dom.php';
 //
 
 /** looping over list of ids of doctors **/
-for($id = 0; $id <= 2; $id++)
+for($id = 0; $id <= 5; $id++)
 	{
 	 $url = ("http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=".$id);
 	$link2 = file_get_html($url);
@@ -56,8 +56,7 @@ for($id = 0; $id <= 2; $id++)
 	  
 scraperwiki::save_sqlite(array('num'), array('num' => $info['num'],'courtname' => $info['courtname'],'caseno' => $info['caseno'],'status' => $info['status'],'urlbutton' => $info['urlbutton'] ));
 
-		$result = scraperwiki::select('count(*) as count from num') 
-  		echo $result;
+		
   }
 }
 // called "data".
