@@ -54,7 +54,7 @@ for($id = 0; $id <= 0; $id++)
 		}
 	  
 	  
-scraperwiki::save_sqlite(array('name'), array('name' => '$id', 'CaseSeries' => $info['num']));
+scraperwiki::save_sqlite(array('caseno'), array('caseno' => $info['caseno']));
 
 	  	
   }
