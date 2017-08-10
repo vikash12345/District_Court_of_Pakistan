@@ -54,7 +54,7 @@ for($id = 0; $id <= 0; $id++)
 		}
 	  
 	   scraperwiki::save_sqlite(array('Case','caseno'), 
-    array('Page_No' => $id, 
+    array('Case' => $id, 
           'CaseSeries' => (trim($info['num'])), 
           'courtname' => (trim($info['courtname'])),
 	   'caseno' => (trim($info['caseno'])),
