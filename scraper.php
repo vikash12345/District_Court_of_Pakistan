@@ -37,14 +37,20 @@ for($id = 0; $id <= 0; $id++)
 	$link2 = file_get_html($url);
   foreach($link2->find("//*[@id='w0']/table/tbody/tr")as $element){
 
-		if($element)
+		if(is_object($element))
 	{
 
-	 echo	$num   = $element->find("td", 0);
+	 	$num   = $element->find("td", 0);
 		$courtname  = $element->find("td", 1);
 		$caseno  = $element->find("td", 2);
 		$status  = $element->find("td", 3);
 	$href = $element->find(".//td/button", 0);
+			
+			if(is_object($href))
+	{
+		 $urlbutton = $href->value;
+		 echo $urlbutton;
+	}
 		}
 
 	  	
