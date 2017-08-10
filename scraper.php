@@ -40,10 +40,10 @@ for($id = 0; $id <= 0; $id++)
 		if($element)
 	{
 
-	echo 	$num   = $element->find("td", 0);
-	echo	$courtname  = $element->find("td", 1);
-	echo	$caseno  = $element->find("td", 2);
-	echo	$status  = $element->find("td", 3);
+	 echo	$num   = $element->find("td", 0);
+		$courtname  = $element->find("td", 1);
+		$caseno  = $element->find("td", 2);
+		$status  = $element->find("td", 3);
 	$href = $element->find(".//td/button", 0);
 		}
 
