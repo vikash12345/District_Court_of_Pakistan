@@ -35,9 +35,9 @@ for($id = 0; $id <= 0; $id++)
 	{
 	 $url = ("http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=".$id);
 	$link2 = file_get_html($url);
-  foreach($link2->find("//*[@id='w0']/table/tbody")as $element){
+  foreach($link2->find("//*[@id='w0']/table/tbody/tr[2]")as $element){
     
-	   	 	 $num   = $element->find("td" ,1);
+	   	 	 $num   = $element->find("td" ,2);
 	  	   	 
 	  	   	
 
