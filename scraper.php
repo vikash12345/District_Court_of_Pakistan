@@ -44,7 +44,7 @@ for($id = 0; $id <= 0; $id++)
 			 $Option  = $element->find("td" ,3);
 	  	   	
 
-	  	   	 	
+	  	   	 	echo "Case NO : $num, CourtName : $CourtN";
 
 	  	
   }
