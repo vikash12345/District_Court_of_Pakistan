@@ -48,7 +48,9 @@ for($id = 20120; $id <= 69372; $id++)
 			
 			if(is_object($href))
 	{
-		 $info['urlbutton'] = $href->value;
+		 $info['urlbutton'] = $href->onclick;
+				
+				echo $info['urlbutton'];
 		 
 	}
 		}
