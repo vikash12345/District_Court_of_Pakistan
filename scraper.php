@@ -71,7 +71,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 									 array('name' => $info['CaseNo'])
 									
 									)
-						
+					}
 						
 					}	    
 				/*		
