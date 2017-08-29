@@ -54,7 +54,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 						
 					if ($DetailPg) {
 						//	Assign fields to varilables
-							//This is for Case Details
+						//This is for Case Details
 					 	 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $InstDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
@@ -68,8 +68,8 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
 					
 						if($CaseNo){
-						scraperwiki::save_sqlite(array('URL'), array('URL' => $FinalURL, 
-										'InstDte' => $InstDte,
+						scraperwiki::save_sqlite(array('CaseNo'), array('FinalURL' => $FinalURL, 
+										'CaseNo' => $CaseNo,
 										'PageLoop' =>  $PageLoop,
 										'InstDte1st' =>  $InstDte1st
 										
