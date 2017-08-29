@@ -44,7 +44,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					$info['CourtName']	=	$element->find('./td[2]', 0);
+					$CourtName	=	$element->find('./td[2]', 0);
 					$CaseNumbr	=	$element->find('./td[3]', 0);
 					$CaseStats	=	$element->find('./td[4]', 0);
 					$CaseValue	=	$element->find('./td[5]/button', 0);
@@ -55,7 +55,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					if ($DetailPg) {
 						//	Assign fields to varilables
 						//This is for Case Details
-					 	 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
+					 	$info['$CaseNo']			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $InstDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $info['InstDte1st']			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
 						 $Status			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
@@ -75,7 +75,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 										
 										)); */
 							scraperwiki::save_sqlite(array('CaseNo'), 
-    											array('CaseNo' => $CaseNo, 
+    											 array('CaseNo' => $info['$CaseNo'], 
 											'CourtName' => $info['CourtName'], 
           										'InstDte1st' => $info['InstDte1st']
 											      
