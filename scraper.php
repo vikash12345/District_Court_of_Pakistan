@@ -67,6 +67,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
 					scraperwiki::save_sqlite(array('PageLoop'), array('FinalURL' => $FinalURL, 
 										'InstDte' => $InstDte,
+										'PageLoop' =>  $PageLoop,
 										'InstDte1st' =>  $InstDte1st,
 										'Status' => $Status,
 										'CourtName2' => $CourtName2,
