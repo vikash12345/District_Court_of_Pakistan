@@ -44,19 +44,13 @@ for($id = 27720; $id <= 69372; $id++)
 		$info['courtname']  	= $element->find("td", 1)->plaintext;
 		$info['caseno']  	= $element->find("td", 2)->plaintext;
 		$info['status']  	= $element->find("td", 3)->plaintext;
-		$href 			= $element->find(".//td/button", 0);
+		 $info['$href']			= $element->find(".//td/button", 0)->value;
+			scraperwiki::save_sqlite(array('num'), array('num' => $info['num'],'courtname' => $info['courtname'],'caseno' => $info['caseno'],'status' => $info['status'],'urlbutton' => $info['urlbutton'] ));
+
 			
-			if(is_object($href))
-	{
-		 $info['urlbutton'] = $href->onclick;
-				
-				echo $info['urlbutton'];
-		 
-	}
 		}
 	  
 	  
-scraperwiki::save_sqlite(array('num'), array('num' => $info['num'],'courtname' => $info['courtname'],'caseno' => $info['caseno'],'status' => $info['status'],'urlbutton' => $info['urlbutton'] ));
 
 		
   }
