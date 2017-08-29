@@ -65,7 +65,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 						 $USCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 3)->plaintext;
 						 $AdvPSide1			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 4)->plaintext;
 						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
-					scraperwiki::save_sqlite(array('CaseNo'), array('CaseNo' => $CaseNo, 
+					scraperwiki::save_sqlite(array('name'), array('CaseNo' => $CaseNo, 
 										'InstDte' => $InstDte,
 										'InstDte1st' =>  $InstDte1st,
 										'Status' => $Status,
