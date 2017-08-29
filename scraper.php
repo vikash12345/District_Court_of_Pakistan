@@ -69,17 +69,8 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					scraperwiki::save_sqlite(array('URL'), array('URL' => $FinalURL, 
 										'InstDte' => $InstDte,
 										'PageLoop' =>  $PageLoop,
-										'InstDte1st' =>  $InstDte1st,
-										'Status' => $Status,
-										'CourtName2' => $CourtName2,
-										'RestrCode' => $RestrCode,
-										'USCode' => $USCode,
-										'Status' => $Status,
-										'CourtName2' => $CourtName2,
-										'RestrCode' => $RestrCode,
-										'USCode' => $USCode,
-										'AdvPSide1' => $AdvPSide1,
-										'AdvPSide2' => $AdvPSide1
+										'InstDte1st' =>  $InstDte1st
+										
 										));
 					
 					}
