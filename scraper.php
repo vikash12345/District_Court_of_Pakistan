@@ -67,7 +67,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 						 $info['AdvPSide2']			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
 					
 
-	scraperwiki::save_sqlite(array('Name','CourtName2'), 
+	scraperwiki::save_sqlite(array('CaseNo','CaseNo'), 
     array('CaseNo' => $info['$CaseNo'], 
 	  
           'InstDte' => (trim($info['InstDte'])), 
