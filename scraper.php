@@ -55,7 +55,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					if ($DetailPg) {
 						//	Assign fields to varilables
 						//This is for Case Details
-					 	 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
+					 	 $info['CaseNo']			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $InstDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $nstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
 						 $Status			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
@@ -68,7 +68,8 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 		
 						if($CaseNo){
 							
-						scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo}echo $CaseNo;
+						scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNo']}
+											      echo $CaseNo;
 						
 				/*		
 						scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo , 'InstDte' => $InstDte, 'nstDte1st' => $nstDte1st, 'Status' => $Status, 'CourtName2' => $CourtName2, 'CaseFlDte' => $CaseFlDte, 'RestrCode' => $RestrCode, 'USCode' => $USCode, 'AdvPSide1' => $AdvPSide1, 'AdvPSide2' => $AdvPSide2));
