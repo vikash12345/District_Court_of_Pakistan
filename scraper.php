@@ -66,9 +66,10 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 						 $AdvPSide1			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 4)->plaintext;
 						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
 		
-						
-						scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo , 'InstDte' => $InstDte, 'nstDte1st' => $nstDte1st, 'Status' => $Status, 'CourtName2' => $CourtName2, 'CaseFlDte' => $CaseFlDte, 'RestrCode' => $RestrCode, 'USCode' => $USCode, 'AdvPSide1' => $AdvPSide1, 'AdvPSide2' => $AdvPSide2));
-
+						if($CaseNo){
+							echo $CaseNo;
+						scraperwiki::save_sqlite(array('Case'), array('Case' => $CaseNo , 'InstDte' => $InstDte, 'nstDte1st' => $nstDte1st, 'Status' => $Status, 'CourtName2' => $CourtName2, 'CaseFlDte' => $CaseFlDte, 'RestrCode' => $RestrCode, 'USCode' => $USCode, 'AdvPSide1' => $AdvPSide1, 'AdvPSide2' => $AdvPSide2));
+						}
 	/* scraperwiki::save_sqlite(array('CaseNo','CaseNo'), 
     array('CaseNo' => $PageLoop, 
 	  
