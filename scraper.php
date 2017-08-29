@@ -44,7 +44,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					$CourtName	=	$element->find('./td[2]', 0);
+					$info['CourtName']	=	$element->find('./td[2]', 0);
 					$CaseNumbr	=	$element->find('./td[3]', 0);
 					$CaseStats	=	$element->find('./td[4]', 0);
 					$CaseValue	=	$element->find('./td[5]/button', 0);
@@ -57,7 +57,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 						//This is for Case Details
 					 	 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $InstDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
-						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
+						 $info['InstDte1st']			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
 						 $Status			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
 						 $CourtName2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plaintext;
 						echo "This is Court Name = " .$CourtName2 .'<br/>';
@@ -68,13 +68,18 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
 					
 						
-						scraperwiki::save_sqlite(array('CourtName'), array('CaseNo' => $CaseNo, 
+						/* scraperwiki::save_sqlite(array('CourtName'), array('CaseNo' => $CaseNo, 
 										'CourtName' => $CourtName,
 										'PageLoop' =>  $PageLoop,
 										'InstDte1st' =>  $InstDte1st
 										
-										));
-							
+										)); */
+							scraperwiki::save_sqlite(array('PageNumber','PageLoop'), 
+    											array('PageLoop' => $PageLoop, 
+											'CourtName' => (trim($info['CourtName'])), 
+          										'InstDte1st' => (trim($info['InstDte1st']))
+											      
+											      ));
 						
 					
 					}
