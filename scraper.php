@@ -44,7 +44,7 @@ for($id = 0; $id <= 1; $id++)
 		$info['courtname']  	= $element->find("td", 1)->plaintext;
 		$info['caseno']  	= $element->find("td", 2)->plaintext;
 		$info['status']  	= $element->find("td", 3)->plaintext;
-		 $info['$href']			= $element->find(".//td/button", 0)->value;
+		 $info['urlbutton']			= $element->find(".//td/button", 0)->value;
 			scraperwiki::save_sqlite(array('num'), array('num' => $info['num'],'courtname' => $info['courtname'],'caseno' => $info['caseno'],'status' => $info['status'],'urlbutton' => $info['urlbutton'] ));
 
 			
