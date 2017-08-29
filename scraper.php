@@ -55,17 +55,30 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					if ($DetailPg) {
 						//	Assign fields to varilables
 							//This is for Case Details
-					 	$CaseNo				=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
+					 	 $CaseNo				=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $InstDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
 						 $Status			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
-						echo $CourtName2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plaintext;
+						 $CourtName2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plaintext;
 						 $CaseFlDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 2)->plaintext;
 						 $RestrCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 3)->plaintext;
 						 $USCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 3)->plaintext;
 						 $AdvPSide1			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 4)->plaintext;
 						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
-					
+					scraperwiki::save_sqlite(array('CaseNo'), array('CaseNo' => $CaseNo, 
+										'InstDte' => $InstDte,
+										'InstDte1st' =>  $InstDte1st,
+										'Status' => $Status,
+										'CourtName2' => $CourtName2,
+										'RestrCode' => $RestrCode,
+										'USCode' => $USCode,
+										'Status' => $Status,
+										'CourtName2' => $CourtName2,
+										'RestrCode' => $RestrCode,
+										'USCode' => $USCode,
+										'AdvPSide1' => $AdvPSide1,
+										'AdvPSide2' => $AdvPSide1,
+										'DetailPg' => $DetailPg));
 					
 					}
 					
