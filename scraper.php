@@ -21,7 +21,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					$Casenumbr	=	$element->find('./td[3]', 0)->plaintext;
 					$CaseStats	=	$element->find('./td[4]', 0)->plaintext;
 					
-					
+				if($num != null){	
 scraperwiki::save_sqlite(array('Courtname'), array('Courtname' => $Courtname,
 					     'num' => $num ,
 					     'Casenumbr' => $Casenumbr ,
@@ -29,7 +29,7 @@ scraperwiki::save_sqlite(array('Courtname'), array('Courtname' => $Courtname,
 					     ));
 			}
 						
-					
+			}	
 					
 				
 				
