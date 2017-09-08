@@ -14,20 +14,18 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 			//	Paginate all 'View' buttons
 		
 		
-			foreach($Html->find("//*[@id='w0']/table/tbody/tr") as $element) {
+			foreach($Html->find("//[@id='w0']/table/tbody/tr") as $element) {
 			if($element){
 					echo $num		=	$element->find('./td[1]', 0)->plaintext;
-				echo "------------";
 					$Courtname	=	$element->find('./td[2]', 0)->plaintext;
-					$CaseNumbr	=	$element->find('./td[3]', 0)->plaintext;
+					$Casenumbr	=	$element->find('./td[3]', 0)->plaintext;
 					$CaseStats	=	$element->find('./td[4]', 0)->plaintext;
-					$CaseValue	=	$element->find('./td[5]/button', 0);
-					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
-					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
 					
-scraperwiki::save_sqlite(array('num'), array('num' => $num ,
-					     'Courtname' => $Courtname  
-					     
+					
+scraperwiki::save_sqlite(array('Courtname'), array('Courtname' => $Courtname,
+					     'num' => $num ,
+					     'Casenumbr' => $Casenumbr ,
+					     'CaseStats' => $CaseStats
 					     ));
 			}
 						
