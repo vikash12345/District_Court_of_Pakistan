@@ -22,7 +22,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					$CaseStats	=	$element->find('./td[4]', 0)->plaintext;
 					
 				if($num != null){	
-scraperwiki::save_sqlite(array('Courtname'), array('Courtname' => $Courtname,
+scraperwiki::save_sqlite(array('name'), array('name' => $Courtname,
 					     'num' => $num ,
 					     'Casenumbr' => $Casenumbr ,
 					     'CaseStats' => $CaseStats
