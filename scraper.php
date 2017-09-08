@@ -14,7 +14,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 			//	Paginate all 'View' buttons
 		
 		
-			foreach($html->find("//*[@id='w0']/table/tbody/tr") as $element) {
+			foreach($Html->find("//*[@id='w0']/table/tbody/tr") as $element) {
 			if($element){
 					echo $num		=	$element->find('./td[1]', 0)->plaintext;
 				echo "------------";
