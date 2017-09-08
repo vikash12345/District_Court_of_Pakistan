@@ -12,7 +12,9 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 		
 
 			//	Paginate all 'View' buttons
-			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
+		
+		
+			foreach($html->find("//*[@id='w0']/table/tbody/tr") as $element) as $element) {
 			if($element){
 					echo $num		=	$element->find('./td[1]', 0)->plaintext;
 				echo "------------";
