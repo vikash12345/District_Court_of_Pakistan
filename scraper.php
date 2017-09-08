@@ -26,9 +26,8 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
 					
 scraperwiki::save_sqlite(array('num'), array('num' => $num ,
-					     'Courtname' => $Courtname , 
-					     'Casenumbr' => $CaseNumbr, 
-					     'Casestats' => $CaseStats 
+					     'Courtname' => $Courtname  
+					     
 					     ));
 
 						
