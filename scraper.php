@@ -24,7 +24,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					$CaseValue	=	$element->find('./td[5]/button', 0);
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
 					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
-			 scraperwiki::save_sqlite(array('name'), array('Num' => $Num , 'name' => $CourtName , 'InstDte' => $CaseNumbr, 'nstDte1st' => $CaseStats, 'Status' => $CaseValue, 'CourtName2' => $CaseLinkR));
+			 scraperwiki::save_sqlite(array('Num'), array('Num' => $Num , 'name' => $CourtName , 'InstDte' => $CaseNumbr, 'nstDte1st' => $CaseStats, 'Status' => $CaseValue, 'CourtName2' => $CaseLinkR));
 
 						
 					}
