@@ -1,11 +1,11 @@
 <?
 require 		'scraperwiki.php';
 require 		'scraperwiki/simple_html_dom.php';
-$BaseLink	=	'http://202.61.43.40:8080/';
 $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 	
 	//	Page pagination
-	for($PageLoop = 0; $PageLoop < 1; $PageLoop++){
+	for($PageLoop = 0; $PageLoop < 1; $PageLoop++)
+	{
 
 		$FinalURL	=	$SiteURL . $PageLoop;
 		$Html		=	file_get_html($FinalURL);
@@ -14,18 +14,16 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 			//	Paginate all 'View' buttons
 		if($Html)
 		{
-			foreach($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
+			foreach($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) 
+			{
 			
 				
 						
 					$num		=	$element->find('./td[1]', 0)->plaintext;
-					$Courtname	=	$element->find('./td[2]', 0);
+					$Courtname	=	$element->find('./td[2]', 0)->plaintext;
 					$Casenumbr	=	$element->find('./td[3]', 0)->plaintext;
 					$CaseStats	=	$element->find('./td[4]', 0)->plaintext;
-				
-					
-				
-				scraperwiki::save_sqlite(array('num'), array('num' => $num,
+scraperwiki::save_sqlite(array('num'), array('num' => $num,
                                              'Courtname' => $Courtname,
 					     'Casenumbr' => $Casenumbr,
 					     'CaseStats' => $CaseStats
@@ -35,7 +33,7 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 			
 						
 				
-			}
+		}
 				
 				
 				
