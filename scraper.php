@@ -12,16 +12,16 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 		
 
 			//	Paginate all 'View' buttons
-		
-		
+		if($Html)
+		{
 			foreach($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 			
 				
-					echo	$CaseStats	=	$element->find('./td[4]', 0)->plaintext;
-			/*		$num		=	$element->find('./td[1]', 0)->plaintext;
+						
+					$num		=	$element->find('./td[1]', 0)->plaintext;
 					$Courtname	=	$element->find('./td[2]', 0);
 					$Casenumbr	=	$element->find('./td[3]', 0)->plaintext;
-				
+					$CaseStats	=	$element->find('./td[4]', 0)->plaintext;
 				
 					
 				
@@ -31,12 +31,12 @@ $SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 					     'Casenumbr' => $Casenumbr,
 					     'CaseStats' => $CaseStats
                                              ));
-					*/
+					
 
 			
 						
 				
-					
+			}
 				
 				
 				
