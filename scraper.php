@@ -33,10 +33,14 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
 					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
 					
+	 $data = array($CaseLink);
+          for($loopo = 0 ; $loopo < sizeof($data); $loopo++)
+          {	$URL = $data[$loopo];
+					
 					//	Visit link inside 'View' button
-					$DetailPg	=	file_get_html($CaseLink);
+					$DetailPg	=	file_get_html($URL);
 
-					if ($DetailPg) {
+					if ($DetailPg!= null) {
 						//	Assign fields to varilables
 							//This is for Case Details
 						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plantext;
@@ -65,7 +69,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						 $fatherName 			=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[3]", 0)->plantext;				
   
 				
-	}
+	
 				 $record = array( 'caseno' =>$CaseNo, 
 		   'instdte' => $instdte,
 		   'instdtest' => $InstDte1st, 
@@ -93,7 +97,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
            scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','advpside1','advpside2','partyside1','partyside2','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','accuesdname','fathername','caselink'), $record);
 				
 				}}}
-	
+	}}
 	
 	}	
 			
