@@ -13,7 +13,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	
 	
 	//	Page pagination
-	for($PageLoop = 0 ; $PageLoop < 2; $PageLoop++){
+	for($PageLoop = 0 ; $PageLoop < 1; $PageLoop++){
 	$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page='.$PageLoop;
 		$Html		=	file_get_html($FinalURL);
 		$RowNumb	=	-1;
