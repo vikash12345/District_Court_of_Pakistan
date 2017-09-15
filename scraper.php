@@ -35,7 +35,9 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 					
 	 $data = array($CaseLink);
           for($loopo = 0 ; $loopo < sizeof($data); $loopo++)
-          {	$URL = $data[$loopo];
+          {	
+		   $URL = $data[$loopo];
+		  echo   '<br/>'.$URL;
 					
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($URL);
@@ -44,8 +46,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						//	Assign fields to varilables
 							//This is for Case Details
 						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plantext;
-						echo '<br/>'.$CaseNo ;
-						$instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plantext;
+						 $instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plantext;
 						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plantext;
 						 $Status			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plantext;
 						 $CourtName2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plantext;
