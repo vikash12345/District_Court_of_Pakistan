@@ -83,11 +83,11 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		   'challandetail' => $ChallanDetail,
 		   'firdesc' => $FIRDesc,
 		   'accuesdname' => $accuesdname,
-		   'fatherName' => $fatherName,
+		   'fathername' => $fatherName,
 		   'caselink' => $CaseLink);
 						
 						
-           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','advpside1','advpside2','partyside1','partyside2','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','accuesdname','fatherName','caselink'), $record);
+           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','advpside1','advpside2','partyside1','partyside2','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','accuesdname','fathername','caselink'), $record);
 				
 	}}}}
 	
