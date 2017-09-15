@@ -84,18 +84,18 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 				  'FIR',
 				  'FIRReg',
 				  'Offence',
-				  'CaseProperty'
-				  ,
+				  'CaseProperty',
+				  
 				  'NameofIO',
-				  ,
+				 
 				  'ChallanDetail',
-				  ,
+				 
 				  'FIRDesc',
-				  ,
-				  'accuesdname'
-				   ,
-				  'fatherName'
-				   ,
+				 
+				  'accuesdname',
+				   
+				  'fatherName',
+				   
 				  'fatherName'
 				  ), $record);
 				
