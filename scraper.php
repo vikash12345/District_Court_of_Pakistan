@@ -39,30 +39,30 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 					if ($DetailPg) {
 						//	Assign fields to varilables
 							//This is for Case Details
-						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0);
-						 $InstDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0);
-						 $InstDte1st		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1);
-						 $Status			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1);
-						 $CourtName2		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2);
-						 $CaseFlDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 2);
-						 $RestrCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 3);
-						 $USCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 3);
-						 $AdvPSide1			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 4);
-						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4);
+						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plantext;
+						 $InstDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plantext;
+						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plantext;
+						 $Status			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plantext;
+						 $CourtName2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plantext;
+						 $CaseFlDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 2)->plantext;
+						 $RestrCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 3)->plantext;
+						 $USCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 3)->plantext;
+						 $AdvPSide1			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 4)->plantext;
+						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plantext;
 						 //This is for Parties Side
-						 $Partyside1		=	$DetailPg->find("//*[@id='party_side_1']/tbody/tr/td", 0);
-						 $Partyside2		=	$DetailPg->find("//*[@id='party_side_2']/tbody/tr/td", 0);
+						 $Partyside1		=		$DetailPg->find("//*[@id='party_side_1']/tbody/tr/td", 0)->plantext;
+						 $Partyside2		=		$DetailPg->find("//*[@id='party_side_2']/tbody/tr/td", 0)->plantext;
 						 //This is for FIR DETAILS
-						 $FIR				=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[1]/td[1]", 0);
-						 $FIRReg			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[1]/td[2]", 0);
-						 $Offence			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[2]/td[1]", 0);
-						 $IncidentDate 		=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[2]/td[2]", 0);
-						 $CaseProperty		=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[3]/td[1]", 0);
-						 $NameofIO			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[3]/td[2]", 0);
-						 $ChallanDetail 	=   $DetailPg->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0);
-						 $FIRDesc 			= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0);	
-						 $accuesdname 		=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[2]", 0);
-						 $fatherName 		=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[3]", 0);				
+						 $FIR				=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[1]/td[1]", 0)->plantext;
+						 $FIRReg			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[1]/td[2]", 0)->plantext;
+						 $Offence			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[2]/td[1]", 0)->plantext;
+						 $IncidentDate 			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[2]/td[2]", 0)->plantext;
+						 $CaseProperty			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[3]/td[1]", 0)->plantext;
+						 $NameofIO			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[3]/td[2]", 0)->plantext;
+						 $ChallanDetail 		=   	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0)->plantext;
+						 $FIRDesc 			= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plantext;	
+						 $accuesdname 			=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[2]", 0)->plantext;
+						 $fatherName 			=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[3]", 0)->plantext;				
    $record = array( 'caseno' =>$CaseNo, 'InstDte' => $InstDte,'InstDte1st' => $InstDte1st , 
 		   'Status' => $Status , 'CourtName2' => $CourtName2, 'CaseFlDte' => $CaseFlDte, 'RestrCode' => $RestrCode , 'USCode' => $USCode, 'AdvPSide1' => $AdvPSide1, 'AdvPSide2' => $AdvPSide2
 		  , 'Partyside1' => $Partyside1
@@ -76,10 +76,10 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		  , 'FIRDesc' => $FIRDesc
 		  , 'accuesdname' => $accuesdname
 		  , 'fatherName' => $fatherName
-		  , 'DetailPg' => $DetailPg);
+		  , 'CaseLink' => $CaseLink);
 						
 						
-           scraperwiki::save(array('caseno','InstDte','InstDte1st','Status','CourtName2','CaseFlDte','RestrCode','USCode','AdvPSide1','AdvPSide2','Partyside1','Partyside2','FIR','FIRReg','Offence','CaseProperty','NameofIO','ChallanDetail','FIRDesc','accuesdname','fatherName','DetailPg'), $record);
+           scraperwiki::save(array('caseno','InstDte','InstDte1st','Status','CourtName2','CaseFlDte','RestrCode','USCode','AdvPSide1','AdvPSide2','Partyside1','Partyside2','FIR','FIRReg','Offence','CaseProperty','NameofIO','ChallanDetail','FIRDesc','accuesdname','fatherName','CaseLink'), $record);
 				
 	}}}}
 	
