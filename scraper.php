@@ -65,29 +65,29 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						 $fatherName 			=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[3]", 0)->plantext;				
    $record = array( 'caseno' =>$CaseNo, 
 		   'instdte' => $instdte,
-		   'Instdte1st' => $InstDte1st, 
-		   'Status' => $Status, 
-		   'CourtName2' => $CourtName2, 
-		   'CaseFlDte' => $CaseFlDte, 
-		   'RestrCode' => $RestrCode, 
-		   'USCode' => $USCode, 
-		   'AdvPSide1' => $AdvPSide1, 
-		   'AdvPSide2' => $AdvPSide2,
-		   'Partyside1' => $Partyside1,
-		   'Partyside2' => $Partyside2,
-		   'FIR' => $FIR,
-		   'FIRReg' => $FIRReg,
-		   'Offence' => $Offence,
-		   'CaseProperty' => $CaseProperty,
-		   'NameofIO' => $NameofIO,
-		   'ChallanDetail' => $ChallanDetail,
-		   'FIRDesc' => $FIRDesc,
+		   'instdtest' => $InstDte1st, 
+		   'status' => $Status, 
+		   'courtname2' => $CourtName2, 
+		   'caseflde' => $CaseFlDte, 
+		   'restrcode' => $RestrCode, 
+		   'uscode' => $USCode, 
+		   'advpside1' => $AdvPSide1, 
+		   'advpside2' => $AdvPSide2,
+		   'partyside1' => $Partyside1,
+		   'partyside2' => $Partyside2,
+		   'fir' => $FIR,
+		   'firreg' => $FIRReg,
+		   'offence' => $Offence,
+		   'caseproperty' => $CaseProperty,
+		   'nameofio' => $NameofIO,
+		   'challandetail' => $ChallanDetail,
+		   'firdesc' => $FIRDesc,
 		   'accuesdname' => $accuesdname,
 		   'fatherName' => $fatherName,
-		   'CaseLink' => $CaseLink);
+		   'caselink' => $CaseLink);
 						
 						
-           scraperwiki::save(array('caseno','instdte','Instdte1st','Status','CourtName2','CaseFlDte','RestrCode','USCode','AdvPSide1','AdvPSide2','Partyside1','Partyside2','FIR','FIRReg','Offence','CaseProperty','NameofIO','ChallanDetail','FIRDesc','accuesdname','fatherName','CaseLink'), $record);
+           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','advpside1','advpside2','partyside1','partyside2','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','accuesdname','fatherName','caselink'), $record);
 				
 	}}}}
 	
