@@ -79,25 +79,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		  , 'DetailPg' => $DetailPg);
 						
 						
-           scraperwiki::save(array('caseno','InstDte','InstDte1st','CourtName2','CaseFlDte','RestrCode','USCode','AdvPSide1','AdvPSide2','Partyside1'
-				,'Partyside2',
-				  'FIR',
-				  'FIRReg',
-				  'Offence',
-				  'CaseProperty',
-				  
-				  'NameofIO',
-				 
-				  'ChallanDetail',
-				 
-				  'FIRDesc',
-				 
-				  'accuesdname',
-				   
-				  'fatherName',
-				   
-				  'fatherName'
-				  ), $record);
+           scraperwiki::save(array('caseno','InstDte','InstDte1st','Status','CourtName2','CaseFlDte','RestrCode','USCode','AdvPSide1','AdvPSide2','Partyside1','Partyside2','FIR','FIRReg','Offence','CaseProperty','NameofIO','ChallanDetail','FIRDesc','accuesdname','fatherName','DetailPg'), $record);
 				
 	}}}}
 	
