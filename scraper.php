@@ -64,8 +64,8 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						 $accuesdname 			=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[2]", 0)->plantext;
 						 $fatherName 			=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[3]", 0)->plantext;				
    $record = array( 'caseno' =>$CaseNo, 
-		   'InstDte' => $InstDte,
-		   'InstDte1st' => $InstDte1st, 
+		   'Instdte' => $InstDte,
+		   'Instdte1st' => $InstDte1st, 
 		   'Status' => $Status, 
 		   'CourtName2' => $CourtName2, 
 		   'CaseFlDte' => $CaseFlDte, 
@@ -87,7 +87,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		   'CaseLink' => $CaseLink);
 						
 						
-           scraperwiki::save(array('caseno','InstDte','InstDte1st','Status','CourtName2','CaseFlDte','RestrCode','USCode','AdvPSide1','AdvPSide2','Partyside1','Partyside2','FIR','FIRReg','Offence','CaseProperty','NameofIO','ChallanDetail','FIRDesc','accuesdname','fatherName','CaseLink'), $record);
+           scraperwiki::save(array('caseno','Instdte','Instdte1st','Status','CourtName2','CaseFlDte','RestrCode','USCode','AdvPSide1','AdvPSide2','Partyside1','Partyside2','FIR','FIRReg','Offence','CaseProperty','NameofIO','ChallanDetail','FIRDesc','accuesdname','fatherName','CaseLink'), $record);
 				
 	}}}}
 	
