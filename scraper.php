@@ -41,6 +41,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 					
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($URL);
+		  			print_r($DetailPg);
 
 					if ($DetailPg!= null) {
 						//	Assign fields to varilables
