@@ -64,7 +64,8 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						 $NameofIO			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[3]/td[2]", 0)->plaintext;
 						 $ChallanDetail 		=   	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0)->plaintext;
 						 $FIRDesc 			= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
-						 $html_encoded = htmlentities($DetailPg);
+						 $html_encoded = html_entity_decode($DetailPg); 
+						// $html_encoded = htmlentities($DetailPg);
 										
   
 			/*	$record = array( 'caseno' => $CaseNo, 'instdte' => $instdte,);
