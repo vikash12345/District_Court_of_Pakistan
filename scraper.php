@@ -47,7 +47,8 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 							//This is for Case Details
 						// echo "$DetailPg...\n";
 						 $htmlofpage			=	$DetailPg->find("/html/body/div", 0)->html;
-						 echo "$htmlofpage...\n";
+						print_r($htmlofpage); 
+						// echo "$htmlofpage...\n";
 						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
