@@ -37,7 +37,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
           for($loopo = 0 ; $loopo < sizeof($data); $loopo++)
           {	
 		   $URL = $data[$loopo];
-		  echo   ' = > '.$URL. '\n';
+		  echo "$URL...\n";
 					
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($URL);
