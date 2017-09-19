@@ -46,7 +46,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						//	Assign fields to varilables
 							//This is for Case Details
 						// echo "$DetailPg...\n";
-						 echo "$DetailPg...\n";
+						$DetailPg = $htmlpageoflink;
 						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
@@ -85,11 +85,11 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		   'challandetail' => $ChallanDetail,
 		   'firdesc' => $FIRDesc,
 		   'mainpage' => $FinalURL,
-		   'htmlofpage' => $htmlofpage,
+		   'htmlpageoflink' => $htmlpageoflink,
 		   'caselink' => $CaseLink);
 						
 						
-           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','mainpage','htmlofpage','caselink'), $record);
+           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','mainpage','htmlpageoflink','caselink'), $record);
 				
 				}}}
 	}}
