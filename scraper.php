@@ -41,12 +41,14 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 					
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($URL);
-		  			print_r($DetailPg);
+		  			
 
 					if ($DetailPg!= null) {
 						//	Assign fields to varilables
 							//This is for Case Details
-						// echo "$DetailPg...\n";
+						$htmlofpage   = $DetailPg->find("html/body/div", 0)->src;
+
+						print_r($htmlofpage);
 						
 						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
