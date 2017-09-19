@@ -6,8 +6,8 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	$Pagination = 	file_get_html($SiteURL);
 	$numberforloop = $Pagination->find("//*[@id='w0']/div/b[2]",0)->plaintext;
 	$text = str_replace(',', '', $numberforloop);
-	//$loop = $text/20;
-	$loop = 5;
+	$loop = $text/20;
+	
 	
 	// echo $AllPages = (int)$numberforloop;
 	
