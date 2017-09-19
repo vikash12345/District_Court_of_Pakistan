@@ -55,11 +55,6 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						 $CaseFlDte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 2)->plaintext;
 						 $RestrCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 3)->plaintext;
 						 $USCode			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 3)->plaintext;
-						 $AdvPSide1			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 4)->plaintext;
-						 $AdvPSide2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
-						 //This is for Parties Side
-						 $Partyside1		=		$DetailPg->find("//*[@id='party_side_1']/tbody/tr/td", 0)->plantext;
-						 $Partyside2		=		$DetailPg->find("//*[@id='party_side_2']/tbody/tr/td", 0)->plantext;
 						 //This is for FIR DETAILS
 						 $FIR				=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[1]/td[1]", 0)->plaintext;
 						 $FIRReg			=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[1]/td[2]", 0)->plaintext;
@@ -83,10 +78,6 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		   'caseflde' => $CaseFlDte, 
 		   'restrcode' => $RestrCode, 
 		   'uscode' => $USCode, 
-		   'advpside1' => $AdvPSide1, 
-		   'advpside2' => $AdvPSide2,
-		   'partyside1' => $Partyside1,
-		   'partyside2' => $Partyside2,
 		   'fir' => $FIR,
 		   'firreg' => $FIRReg,
 		   'offence' => $Offence,
@@ -99,7 +90,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		   'caselink' => $CaseLink);
 						
 						
-           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','advpside1','advpside2','partyside1','partyside2','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','accuesdname','fathername','caselink'), $record);
+           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','accuesdname','fathername','caselink'), $record);
 				
 				}}}
 	}}
