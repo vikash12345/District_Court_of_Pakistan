@@ -6,14 +6,15 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	$Pagination = 	file_get_html($SiteURL);
 	$numberforloop = $Pagination->find("//*[@id='w0']/div/b[2]",0)->plaintext;
 	$text = str_replace(',', '', $numberforloop);
-	$loop = $text/20;
+	//$loop = $text/20;
+	$loop = 5;
 	
 	// echo $AllPages = (int)$numberforloop;
 	
 	
 	
 	//	Page pagination
-	for($PageLoop = 0 ; $PageLoop < 1; $PageLoop++){
+	for($PageLoop = 0 ; $PageLoop < $loop; $PageLoop++){
 	$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page='.$PageLoop;
 		$Html		=	file_get_html($FinalURL);
 		$RowNumb	=	-1;
