@@ -18,7 +18,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page='.$PageLoop;
 		$Html		=	file_get_html($FinalURL);
 		$RowNumb	=	-1;
-		echo "Page No =>" . "$PageLoop.\n";
+		echo "Page No = > " . "$PageLoop.\n";
 		if ($Html) {
 
 			//	Paginate all 'View' buttons
