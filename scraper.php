@@ -72,9 +72,9 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						 $accuesdname 			=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[2]", 0)->plaintext;
 						 $fatherName 			=	$DetailPg->find("//*[@id='w0']/table/tbody/tr/td[3]", 0)->plaintext;				
   
-				$record = array( 'caseno' => $CaseNo, 'instdte' => $instdte,);
-						scraperwiki::save(array('caseno' , 'instdte'), $record);
-	/*
+			/*	$record = array( 'caseno' => $CaseNo, 'instdte' => $instdte,);
+						scraperwiki::save(array('caseno' , 'instdte'), $record); */
+	
 				 $record = array( 'caseno' =>$CaseNo, 
 		   'instdte' => $instdte,
 		   'instdtest' => $InstDte1st, 
@@ -100,7 +100,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						
 						
            scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','advpside1','advpside2','partyside1','partyside2','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','accuesdname','fathername','caselink'), $record);
-		*/		
+				
 				}}}
 	}}
 	
