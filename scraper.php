@@ -46,10 +46,10 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 						//	Assign fields to varilables
 							//This is for Case Details
 						// echo "$DetailPg...\n";
-						 $htmlofpage			=	$DetailPg->find("/html/body", 0)->src;
-						 echo "$htmlofpage...\n";
+						/* $htmlofpage			=	$DetailPg->find("/html/body", 0)->src;
+						 echo "$htmlofpage...\n"; */
 						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
-						  $instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
+						 $instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
 						 $Status			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
 						 $CourtName2			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plaintext;
@@ -86,10 +86,11 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		   'challandetail' => $ChallanDetail,
 		   'firdesc' => $FIRDesc,
 		   'mainpage' => $FinalURL,
+		   'htmlofeachpage' => $DetailPg,
 		   'caselink' => $CaseLink);
 						
 						
-           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','mainpage','caselink'), $record);
+           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','mainpage','htmlofeachpage','caselink'), $record);
 				
 				}}}
 	}}
