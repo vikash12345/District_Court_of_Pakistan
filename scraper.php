@@ -86,10 +86,11 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		   'challandetail' => $ChallanDetail,
 		   'firdesc' => $FIRDesc,
 		   'mainpage' => $FinalURL,
+		   'html_encoded' => $html_encoded,
 		   'caselink' => $CaseLink);
 						
 						
-           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','mainpage','caselink'), $record);
+           scraperwiki::save(array('caseno','instdte','instdtest','status','courtname2','caseflde','restrcode','uscode','fir','firreg','offence','caseproperty','nameofio','challandetail','firdesc','mainpage','$html_encoded','caselink'), $record);
 				
 				}}}
 	}}
