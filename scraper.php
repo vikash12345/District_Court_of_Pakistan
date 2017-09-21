@@ -17,7 +17,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	for($PageLoop = 0 ; $PageLoop < $loop; $PageLoop++){
 	$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page='.$PageLoop;
 		$Html		=	file_get_html($FinalURL);
-		
+		sleep(10);
 		$RowNumb	=	-1;
 		echo "Page No = > " . "$PageLoop.\n";
 		if ($Html) {
@@ -26,6 +26,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
+					sleep(2);
 					$CourtName	=	$element->find('./td[2]', 0);
 					
 					
