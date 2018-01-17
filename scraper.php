@@ -19,8 +19,9 @@ echo $SiteURL;
 	//$loop
 	for($PageLoop = 0; $PageLoop < 2; $PageLoop++){
 	$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page='.$PageLoop;
+		sleep(5);
 		$Html		=	file_get_html($FinalURL);
-		sleep(10);
+		sleep(5);
 		$RowNumb	=	-1;
 		echo "Page No = > " . "$PageLoop.\n";
 		if ($Html) {
