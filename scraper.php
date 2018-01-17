@@ -17,7 +17,7 @@ echo $SiteURL;
 	
 	//	Page pagination
 	//$loop
-	for($PageLoop = 1; $PageLoop < 2; $PageLoop++){
+	for($PageLoop = 0; $PageLoop < 2; $PageLoop++){
 	$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page='.$PageLoop;
 		$Html		=	file_get_html($FinalURL);
 		sleep(10);
@@ -31,8 +31,6 @@ echo $SiteURL;
 				if ($RowNumb != 0) {
 					sleep(2);
 					$CourtName	=	$element->find('./td[2]', 0);
-					
-					
 					$CaseNumbr	=	$element->find('./td[3]', 0);
 					$CaseStats	=	$element->find('./td[4]', 0);
 					$CaseValue	=	$element->find('./td[5]/button', 0);
@@ -50,9 +48,6 @@ echo $SiteURL;
 		  			
 
 					if ($DetailPg!= null) {
-						//	Assign fields to varilables
-							//This is for Case Details
-									
 						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
@@ -71,13 +66,9 @@ echo $SiteURL;
 						 $ChallanDetail 		=   	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0)->plaintext;
 						 $FIRDesc 			= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $html_encoded = html_entity_decode($DetailPg); 
-						// $html_encoded = htmlentities($DetailPg);
-										
+								
   
-			/*	$record = array( 'caseno' => $CaseNo, 'instdte' => $instdte,);
-						scraperwiki::save(array('caseno' , 'instdte'), $record); */
-	
-				 $record = array( 'caseno' =>$CaseNo, 
+		$record = array( 'caseno' =>$CaseNo, 
 		   'instdte' => $instdte,
 		   'instdtest' => $InstDte1st, 
 		   'status' => $Status, 
