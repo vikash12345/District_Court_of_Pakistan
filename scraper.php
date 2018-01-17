@@ -25,7 +25,7 @@ echo $SiteURL;
 		$RowNumb	=	-1;
 		echo "Page No = > " . "$PageLoop.\n";
 		if ($Html) {
-
+			sleep(2);
 			//	Paginate all 'View' buttons
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
@@ -46,9 +46,10 @@ echo $SiteURL;
 					
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($URL);
-		  			
+		  			sleep(2);
 
-					if ($DetailPg!= null) {
+					if ($DetailPg != null || $DetailPg != "") {
+						sleep(2);
 						 $CaseNo			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $instdte			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st			=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
