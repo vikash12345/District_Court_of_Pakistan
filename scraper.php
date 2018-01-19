@@ -23,7 +23,7 @@ echo $SiteURL;
 		$Html		=	file_get_html($FinalURL);
 		sleep(5);
 		$RowNumb	=	-1;
-		echo "Page No = > " . "$PageLoop.\n";
+		echo"$PageLoop\n";
 		if ($Html) {
 			sleep(2);
 			//	Paginate all 'View' buttons
