@@ -4,7 +4,6 @@ require 		'scraperwiki/simple_html_dom.php';
 $BaseLink	=	'http://202.61.43.40:8080/';
 	$SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page=0';
 	sleep(5);
-echo $SiteURL;
 	$Pagination = 	file_get_html($SiteURL);
 	$numberforloop = $Pagination->find("//*[@id='w0']/div/b[2]",0)->plaintext;
 	$text = str_replace(',', '', $numberforloop);
@@ -25,7 +24,7 @@ echo $SiteURL;
 		$RowNumb	=	-1;
 		echo"$PageLoop\n";
 		if ($Html) {
-			sleep(2);
+			sleep(5);
 			//	Paginate all 'View' buttons
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
@@ -43,10 +42,10 @@ echo $SiteURL;
           {	
 		   $URL = $data[$loopo];
 		  
-					
+					sleep(2);
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($URL);
-		  			sleep(2);
+		  			sleep(5);
 
 					if ($DetailPg != null || $DetailPg != "") {
 						sleep(2);
