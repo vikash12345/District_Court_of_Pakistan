@@ -22,7 +22,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 		$Html		=	file_get_html($FinalURL);
 		sleep(5);
 		$RowNumb	=	-1;
-		echo"$PageLoop\n";
+		echo"$FinalURL\n";
 		if ($Html) {
 			sleep(5);
 			//	Paginate all 'View' buttons
