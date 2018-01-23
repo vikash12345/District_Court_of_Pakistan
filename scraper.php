@@ -17,7 +17,7 @@ echo $SiteURL;
 	
 	//	Page pagination
 	//
-	for($PageLoop = 0; $PageLoop < $loop; $PageLoop++){
+	for($PageLoop = 108; $PageLoop < $loop; $PageLoop++){
 	$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page='.$PageLoop;
 		sleep(5);
 		$Html		=	file_get_html($FinalURL);
