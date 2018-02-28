@@ -16,20 +16,20 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 	
 	//	Page pagination
 	//
-	for($PageLoop = 1000; $PageLoop < $loop; $PageLoop++){
+	for($PageLoop = 1017; $PageLoop < $loop; $PageLoop++){
 	$FinalURL  		=  'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyfir&page='.$PageLoop;
-		sleep(5);
+		sleep(7);
 		$Html		=	file_get_html($FinalURL);
 		sleep(5);
 		$RowNumb	=	-1;
 		echo"$FinalURL\n";
 		if ($Html) {
-			sleep(5);
+			sleep(7);
 			//	Paginate all 'View' buttons
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					sleep(2);
+					sleep(5);
 					$CourtName	=	$element->find('./td[2]', 0);
 					$CaseNumbr	=	$element->find('./td[3]', 0);
 					$CaseStats	=	$element->find('./td[4]', 0);
@@ -45,7 +45,7 @@ $BaseLink	=	'http://202.61.43.40:8080/';
 					sleep(2);
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($URL);
-		  			sleep(5);
+		  			sleep(8);
 
 					if ($DetailPg != null || $DetailPg != "") {
 						sleep(2);
